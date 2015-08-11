@@ -11,7 +11,7 @@ import com.pi4j.system.SystemInfo;
  *
  */
 public class SystemInformation {
-	public void GetInformation()
+	public static void GetInformation()
 	{
     	try {
 	        // display a few of the available system information properties
