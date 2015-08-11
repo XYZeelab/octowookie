@@ -1,0 +1,13 @@
+Needed Software
+Eclipse
+JDK
+Maven
+Putty
+
+
+Raspberry Pi
+Rasbian installed
+XRDP
+Samba
+SSH
+JDK 
