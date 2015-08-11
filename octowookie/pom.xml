@@ -5,8 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.xyzeelab</groupId>
     <artifactId>octowookie</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <version>0.0.1</version>
     <name>octowookie</name>
     <url>http://octowookie.xyzeelab.com</url>
     <properties>
@@ -18,8 +17,8 @@
             <url>scpexe://192.168.11.6/:/home/pi</url>
         </repository>
         <snapshotRepository>
-	        <uniqueVersion>false</uniqueVersion>
-    	</snapshotRepository>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
     </distributionManagement>
     <dependencies>
         <dependency>
@@ -51,20 +50,23 @@
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <version>1.7</version>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
                 <executions>
                     <execution>
-                        <id>remove-old-artifacts</id>
-                        <phase>package</phase>
+                        <phase>deploy</phase>
                         <goals>
-                            <goal>remove-project-artifact</goal>
+                            <goal>exec</goal>
                         </goals>
-                        <configuration>
-                            <removeAll>true</removeAll><!--When true, remove all built artifacts including all versions. When false, remove all built artifacts of this project version -->
-                        </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <executable>sh</executable>
+                    <arguments>
+                        <!--Shell script location -->
+                        <argument>rm -fr com</argument>
+                    </arguments>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

@@ -20,4 +20,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/main/java/com/xyzeelab/octowookie/core/exception</name>
+			<type>2</type>
+			<location>C:/Users/Anthony/git/octowookie/octowookie/src/main/java/com/xyzeelab/octowookie/core/exception</location>
+		</link>
+	</linkedResources>
 </projectDescription>
