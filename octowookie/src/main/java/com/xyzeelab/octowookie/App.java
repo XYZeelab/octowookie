@@ -1,19 +1,20 @@
 package com.xyzeelab.octowookie;
 
-import com.xyzeelab.octowookie.misc.SystemInformation;
+import com.xyzeelab.octowookie.misc.SysInfo;
+import com.xyzeelab.octowookie.utils.LED;
+import com.xyzeelab.octowookie.RunnerRunnable;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
+
+public class App {
     public static void main( String[] args )
     {
-    	SystemInformation.GetInformation();
+    	SysInfo.GetInformation();
     	
-    	RunnerRunnable runner = new RunnerRunnable();
-    	Thread tc1 = new Thread(runner);
-    	tc1.start();
+    	System.out.println("Blinking LED");
+    	LED.blinkLED();
+    	
+//    	RunnerRunnable runner = new RunnerRunnable();
+//    	Thread tc1 = new Thread(runner);
+//    	tc1.start();
     }
 }

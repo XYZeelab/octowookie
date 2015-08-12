@@ -10,7 +10,7 @@ import com.pi4j.system.SystemInfo;
  * @author Anthony Chang
  *
  */
-public class SystemInformation {
+public class SysInfo {
 	public static void GetInformation()
 	{
     	try {
