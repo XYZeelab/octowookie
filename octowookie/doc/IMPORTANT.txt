@@ -1,0 +1,10 @@
+https://en.wikipedia.org/wiki/Simple_Sensor_Interface_protocol#SSI_message_structure
+http://www.mysensors.org/download/serial_api_14
+
+ // total packet length minus flags len+4
+ U8 sflag;   //0x7e start of packet end of packet flag from HDLC
+ U8 cmd;     //tells the other side what to do.
+ U8 len;     // payload length
+ U8 payload[len];  // could be zero len
+ U16 crc;
+ U8 eflag;   //end of frame flag

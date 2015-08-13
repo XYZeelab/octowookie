@@ -31,11 +31,18 @@ public class I2CTest {
 
 	    while (true) {
 			try {
+				
+				SerialCommandByte command = SerialCommandByte.REQ_SENSOR_DATA;
+				
+				byte[] startcmd = { 0x7E };
+				System.out.println("Sending length : " + startcmd.length);
+				device.write(startcmd, 0, startcmd.length);
+				
 			    Scanner scanner = new Scanner(System.in);
-			    Integer number = scanner.nextInt();
-			    byte packettosent = number.byteValue();
+			    String line = scanner.nextLine();
+			    byte[] packettosent = line.getBytes();
 			    
-	   			device.write(packettosent);
+	   			device.write(packettosent, 0 ,packettosent.length);
 	   			
 	   			Thread.sleep(2000);
 				//device.read(buffer, 0, 2);
