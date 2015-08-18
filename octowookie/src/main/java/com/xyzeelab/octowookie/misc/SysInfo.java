@@ -11,9 +11,16 @@ import com.pi4j.system.SystemInfo;
  *
  */
 public class SysInfo {
+	/**
+	 * GetInformation - Retrieve System and Network Information of the System
+	 */
 	public static void GetInformation()
 	{
     	try {
+    		
+    	    System.out.println("Available processors (cores): " + 
+    	            Runtime.getRuntime().availableProcessors());
+    	    
 	        // display a few of the available system information properties
 	        System.out.println("----------------------------------------------------");
 	        System.out.println("HARDWARE INFO");

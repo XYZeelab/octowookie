@@ -1,5 +1,5 @@
 package com.xyzeelab.octowookie.module;
 
-public class TemperatureSensor {
+public class TemperatureSensor implements ISensor {
 
 }

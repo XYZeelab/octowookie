@@ -5,7 +5,14 @@ import com.xyzeelab.octowookie.utils.I2CTest;
 import com.xyzeelab.octowookie.utils.LED;
 import com.xyzeelab.octowookie.RunnerRunnable;
 
+/**
+ * @author Anthony
+ *
+ */
 public class App {
+    /**
+     * @param args No parameters accepted yet.
+     */
     public static void main( String[] args )
     {
     	SysInfo.GetInformation();
