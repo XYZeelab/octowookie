@@ -1,4 +1,4 @@
-package com.xyzeelab.octowookie.utils;
+package com.xyzeelab.octowookie.communications;
 
 import java.util.Scanner;
 import java.io.IOException;
@@ -9,13 +9,15 @@ import com.pi4j.io.serial.Serial;
 import com.pi4j.io.serial.SerialDataEvent;
 import com.pi4j.io.serial.SerialFactory;
 
-public class I2CTest {
+public class SerialCommunication {
+	private SerialType serialType;
 	
-	
-	public static void  I2CCommunicationTest () {
+	public static void  Connect () {
     
+		SerialType type;
 	    I2CBus bus = null;
 	    I2CDevice device = null;
+	    
 	    
 		try {
 			bus = I2CFactory.getInstance(I2CBus.BUS_1);
@@ -54,5 +56,13 @@ public class I2CTest {
 			// TODO Auto-generated catch block
 			System.out.println("Exception occurred: " + e.getMessage());
 		}
+	}
+
+	public SerialType getSerialType() {
+		return serialType;
+	}
+
+	public void setSerialType(SerialType serialType) {
+		this.serialType = serialType;
 	}
 }

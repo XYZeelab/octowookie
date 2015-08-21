@@ -1,4 +1,4 @@
-package com.xyzeelab.octowookie.utils;
+package com.xyzeelab.octowookie.communications;
 
 public enum SerialCommandByte {
 		  REQ_SENSOR_DATA(0x52), 
