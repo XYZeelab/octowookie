@@ -14,7 +14,7 @@
     <distributionManagement>
         <repository>
             <id>ssh-repository</id>
-            <url>scpexe://192.168.11.6/:/home/pi</url>
+            <url>scpexe://192.168.11.7/:/home/pi</url>
         </repository>
         <snapshotRepository>
             <uniqueVersion>false</uniqueVersion>
